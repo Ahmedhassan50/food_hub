@@ -3,7 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/drawable/auth_btn_bg.xml" value="0.1125" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/drawable/back_shape.xml" value="0.1125" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/drawable/onboard_btn_bg.xml" value="0.1125" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/drawable/social_btn_bg.xml" value="0.1125" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/drawable/start_with_emal_bg.xml" value="0.1125" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/drawable/wlcome_shadow.xml" value="0.1125" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_on_board.xml" value="0.18" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_reset_password.xml" value="0.2" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_verification.xml" value="0.2" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_welcome.xml" value="0.22" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/onboard_item.xml" value="0.2" />
       </map>
     </option>
   </component>
