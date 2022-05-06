@@ -1,11 +1,8 @@
 package com.example.foodhub.ui.auth;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
 import com.example.foodhub.BaseActivity;
-import com.example.foodhub.R;
 import com.example.foodhub.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends BaseActivity {
@@ -27,6 +24,10 @@ public class LoginActivity extends BaseActivity {
         });
         binding.forgotPassword.setOnClickListener(v->{
             goTo(ResetPasswordActivity.class);
+        });
+
+        binding.loginBtn.setOnClickListener(v->{
+            goTo(PhoneRegistrationActivity.class);
         });
 
     }

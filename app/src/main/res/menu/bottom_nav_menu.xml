@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="@null"
+        android:icon="@drawable/home_icon"
+        />
+    <item
+        android:id="@+id/chatFragment"
+        android:title="@null"
+        android:icon="@drawable/location_icon"
+        />
+
+    <item
+        android:id="@+id/postFragment"
+        android:title="@null"
+        android:icon="@drawable/cart_icon"
+
+        />
+    <item
+        android:id="@+id/usersFragment"
+        android:title="@null"
+        android:icon="@drawable/favorite_icon"
+
+        />
+    <item
+        android:id="@+id/settingFragment"
+        android:title="@null"
+        android:icon="@drawable/notification_icon"
+
+        />
+</menu>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.App.TextInputLayout" parent="">
+        <item name="colorPrimary">#FFC107</item>
+        <item name="colorSecondary">@color/main_color</item>
+        <item name="colorSecondaryVariant">@color/main_color</item>
+
+    </style>
+</resources>

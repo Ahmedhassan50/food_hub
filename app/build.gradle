@@ -42,4 +42,9 @@ dependencies {
 
     //dot indicator
     implementation("com.tbuonomo:dotsindicator:4.3")
+
+    implementation 'com.hbb20:ccp:2.5.0'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
 }
