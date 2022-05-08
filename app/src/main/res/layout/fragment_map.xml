@@ -5,13 +5,314 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="map fragment"
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/restaurant_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:layout_marginHorizontal="30dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/map"
+        app:layout_constraintEnd_toEndOf="@id/map"
+        app:layout_constraintStart_toStartOf="@id/map"
+        app:layout_constraintTop_toTopOf="@+id/map"
+        app:layout_constraintVertical_bias="0.93"
+        android:visibility="gone"
+        android:clickable="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/starbuks"
+                    android:scaleType="center"
+                    android:background="@drawable/back_shape"
+                    android:elevation="4dp"
+                    android:layout_margin="3dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Starbucks"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4102 Pretty View Lanenda"
+                        android:textSize="12dp"
+                        android:textColor="#9796A1"
+                        />
+
+
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/onboard_btn_bg"
+                    android:padding="4dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_favorite_24" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:paddingVertical="2dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#515154"
+                    android:textSize="12dp"
+                    android:text="BURGER"
+                    android:layout_marginEnd="10dp"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:gravity="center"
+                    android:background="@drawable/resturant_cat_shpe"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#515154"
+                    android:textSize="12dp"
+                    android:text="Chicken"
+                    android:layout_marginEnd="10dp"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:gravity="center"
+                    android:background="@drawable/resturant_cat_shpe"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#515154"
+                    android:textSize="12dp"
+                    android:text="Fast Food"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:gravity="center"
+                    android:background="@drawable/resturant_cat_shpe"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/free_delivery"
+                        android:layout_marginEnd="6dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/restaurant_delivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="free delivery"
+                        android:textColor="#5B5B5E"
+                        android:textSize="16dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/time_icon"
+                        android:layout_marginEnd="6dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/restaurant_delivery_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10-15 mins"
+                        android:textColor="#5B5B5E"
+                        android:textSize="16dp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp"
+                android:paddingVertical="2dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/star" />
+
+                <TextView
+                    android:id="@+id/restaurant_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:text="4.5" />
+
+
+
+                <TextView
+                    android:id="@+id/restaurant_rate_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9796A1"
+                    android:textSize="14dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="(25+)" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:textSize="12dp"
+                    android:text="@string/see_review" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/auth_btn_bg"
+                android:elevation="8dp"
+                android:paddingHorizontal="90dp"
+                android:paddingVertical="15dp"
+                android:text="MORE DETAILS"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="40dp"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_email_Layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:errorIconDrawable="@null"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/arrow_back">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_email_ed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Find for food or restaurant..."
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingVertical="15dp"
+                android:textColorHint="#9DA4BB" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginVertical="3dp"
+            android:background="@drawable/back_shape"
+            android:elevation="3dp"
+            android:scaleType="center"
+            android:src="@drawable/find_me" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,9 @@
 package com.example.foodhub.ui.home;
 
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +15,7 @@ import com.example.foodhub.ui.home.fragment.FavoriteFragment;
 import com.example.foodhub.ui.home.fragment.HomeFragment;
 import com.example.foodhub.ui.home.fragment.MapFragment;
 import com.example.foodhub.ui.home.fragment.NotificationFragment;
+import com.google.android.gms.dynamic.SupportFragmentWrapper;
 
 public class HomeActivity extends BaseActivity {
 
@@ -34,7 +35,7 @@ public class HomeActivity extends BaseActivity {
     private void replaceFragment(Fragment fragment) {
         if (fragment != null) {
 
-            FragmentManager manager = getFragmentManager();
+            FragmentManager manager = getSupportFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.replace(R.id.home_frame, fragment);
             transaction.commit();
