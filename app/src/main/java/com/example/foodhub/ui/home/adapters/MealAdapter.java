@@ -2,6 +2,7 @@ package com.example.foodhub.ui.home.adapters;
 
 
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.foodhub.R;
 import com.example.foodhub.data.model.Meal;
+import com.example.foodhub.ui.mealdetails.MealDetailsActivity;
+import com.example.foodhub.ui.restaurantdetails.RestaurantDetailsActivity;
 
 
 import java.util.List;
@@ -41,6 +44,11 @@ public class MealAdapter extends  RecyclerView.Adapter<MealAdapter.MealViewHolde
         holder.mealPrice.setText("$"+meal.getPrice()+"");
         holder.mealRate.setText(meal.getRate()+"");
         holder.mealRateNumber.setText("("+meal.getRateNumber()+")");
+
+        holder.itemView.setOnClickListener(v->{
+            Intent i =new Intent(holder.itemView.getContext(), MealDetailsActivity.class);
+            holder.itemView.getContext().startActivity(i);
+        });
 
 
     }

@@ -1,5 +1,6 @@
 package com.example.foodhub.ui.home.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.example.foodhub.databinding.FragmentHomeBinding;
 import com.example.foodhub.ui.home.adapters.CategoryAdapter;
 import com.example.foodhub.ui.home.adapters.MealAdapter;
 import com.example.foodhub.ui.home.adapters.RestaurantAdapter;
+import com.example.foodhub.ui.mealdetails.MealDetailsActivity;
+import com.example.foodhub.ui.search.SearchActivity;
 
 import java.util.ArrayList;
 
@@ -75,6 +78,12 @@ public class HomeFragment extends Fragment {
 
         binding.mealsRv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         binding.mealsRv.setAdapter(mealAdapter);
+
+
+        binding.searchLayout.setOnClickListener(v->{
+            Intent i =new Intent(getContext(), SearchActivity.class);
+           getContext().startActivity(i);
+        });
 
 
 

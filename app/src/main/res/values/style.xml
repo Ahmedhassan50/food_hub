@@ -7,4 +7,13 @@
         <item name="colorSecondaryVariant">@color/main_color</item>
 
     </style>
+
+    <style name="roundedImageViewRoundedWithStroke">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>

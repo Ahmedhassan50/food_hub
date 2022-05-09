@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:layout_marginEnd="15dp"
+    app:cardCornerRadius="15dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="10dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/meal_image"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/food_search_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="15dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/social_btn_bg"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/meal_image"
+            app:layout_constraintEnd_toEndOf="@id/meal_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/meal_image"
+            app:layout_constraintTop_toTopOf="@id/meal_image"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/meal_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#111719"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:text="$5.50" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/onboard_btn_bg"
+            android:padding="4dp"
+            android:scaleType="center"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:layout_constraintBottom_toBottomOf="@+id/meal_image"
+            app:layout_constraintEnd_toEndOf="@id/meal_image"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/meal_image"
+            app:layout_constraintTop_toTopOf="@+id/meal_image"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/social_btn_bg"
+            android:elevation="6dp"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/meal_image"
+            app:layout_constraintEnd_toEndOf="@+id/meal_image"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="@+id/meal_image"
+            app:layout_constraintTop_toBottomOf="@+id/meal_image">
+
+            <TextView
+                android:id="@+id/meal_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:text="4.5" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:id="@+id/meal_rate_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#9796A1"
+                android:textSize="9dp"
+                android:text="(25+)" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/meal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meat pasta"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/meal_image"
+            app:layout_constraintVertical_bias="0.31" />
+
+        <TextView
+            android:id="@+id/meal_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="meat and basil"
+            android:textColor="#9796A1"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/meal_name"
+            app:layout_constraintVertical_bias="0.06999999" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
