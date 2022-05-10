@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toolbar;
+
 import com.example.foodhub.BaseActivity;
 import com.example.foodhub.R;
 import com.example.foodhub.databinding.ActivityHomeBinding;
@@ -15,12 +17,17 @@ import com.example.foodhub.ui.home.fragment.FavoriteFragment;
 import com.example.foodhub.ui.home.fragment.HomeFragment;
 import com.example.foodhub.ui.home.fragment.MapFragment;
 import com.example.foodhub.ui.home.fragment.NotificationFragment;
-import com.google.android.gms.dynamic.SupportFragmentWrapper;
+import com.example.foodhub.ui.myorder.MyOrderActivity;
+import com.yarolegovich.slidingrootnav.SlideGravity;
+import com.yarolegovich.slidingrootnav.SlidingRootNav;
+import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
+
 
 public class HomeActivity extends BaseActivity {
 
     private ActivityHomeBinding binding;
 
+public static SlidingRootNav drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +35,27 @@ public class HomeActivity extends BaseActivity {
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
+
+
+
+
+        drawer = new SlidingRootNavBuilder(this)
+                .withDragDistance(180)
+                .withRootViewScale(0.75f)
+                .withRootViewElevation(20)
+                .withRootViewYTranslation(4)
+                .withMenuOpened(false)
+                .withContentClickableWhenMenuOpened(false)
+                .withSavedState(savedInstanceState)
+                .withMenuLayout(R.layout.drawer_layout)
+                .inject();
+
+
+        drawerListeners();
+
+
+
+
 
     }
 
@@ -43,6 +71,15 @@ public class HomeActivity extends BaseActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (drawer.isMenuOpened()){
+            drawer.closeMenu();
+        }else{
+            super.onBackPressed();
+        }
+
+    }
 
     public void exec(View view) {
         switch (view.getId()) {
@@ -85,6 +122,33 @@ public class HomeActivity extends BaseActivity {
 
                 break;
         }
+    }
+
+
+    private void drawerListeners(){
+        drawer.getLayout().findViewById(R.id.item1).setOnClickListener(v->{
+            goTo(MyOrderActivity.class);
+            drawer.closeMenu();
+        });
+        drawer.getLayout().findViewById(R.id.item2).setOnClickListener(v->{
+
+        });
+        drawer.getLayout().findViewById(R.id.item3).setOnClickListener(v->{
+
+        });
+        drawer.getLayout().findViewById(R.id.item4).setOnClickListener(v->{
+
+        });
+        drawer.getLayout().findViewById(R.id.item5).setOnClickListener(v->{
+
+        });
+        drawer.getLayout().findViewById(R.id.item6).setOnClickListener(v->{
+
+        });
+        drawer.getLayout().findViewById(R.id.item7).setOnClickListener(v->{
+
+        });
+
     }
 
 }

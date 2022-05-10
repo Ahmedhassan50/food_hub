@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
 import androidx.fragment.app.Fragment;
 
 import androidx.annotation.Nullable;
@@ -15,6 +17,7 @@ import com.example.foodhub.data.model.Category;
 import com.example.foodhub.data.model.Meal;
 import com.example.foodhub.data.model.Restaurant;
 import com.example.foodhub.databinding.FragmentHomeBinding;
+import com.example.foodhub.ui.home.HomeActivity;
 import com.example.foodhub.ui.home.adapters.CategoryAdapter;
 import com.example.foodhub.ui.home.adapters.MealAdapter;
 import com.example.foodhub.ui.home.adapters.RestaurantAdapter;
@@ -28,6 +31,8 @@ public class HomeFragment extends Fragment {
 
 
 
+
+
     @Override
     public View onCreateView( LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         binding =FragmentHomeBinding.inflate(inflater);
@@ -37,6 +42,12 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        binding.drawerIcon.setOnClickListener(v->{
+            HomeActivity.drawer.openMenu();
+        });
+
+
         ArrayList<Category> categories =new ArrayList<>();
         categories.add(new Category(R.drawable.burger_image,"Burger"));
         categories.add(new Category(R.drawable.burger_image,"Donat"));

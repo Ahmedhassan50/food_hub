@@ -16,6 +16,9 @@
         android:theme="@style/Theme.FoodHub"
         tools:replace="android:supportsRtl">
         <activity
+            android:name=".ui.myorder.MyOrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.search.SearchActivity"
             android:exported="false" />
         <activity
