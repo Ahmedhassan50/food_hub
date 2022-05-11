@@ -17,4 +17,10 @@
         <item name="windowNoTitle">true</item>
         <item name="fontFamily">@font/sofia</item>
     </style>
+    <style name="Theme.FoodHub.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.FoodHub.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.FoodHub.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

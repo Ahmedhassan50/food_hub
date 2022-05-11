@@ -1,19 +1,15 @@
 package com.example.foodhub.ui.myorder;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
-
 import android.os.Bundle;
-
+import com.example.foodhub.BaseActivity;
 import com.example.foodhub.databinding.ActivityMyOrderBinding;
 import com.example.foodhub.ui.myorder.fragments.HistoryFragment;
 import com.example.foodhub.ui.myorder.fragments.UpComingFragment;
 import com.example.foodhub.ui.search.adapter.TapAdapter;
-import com.example.foodhub.ui.search.fragments.FoodItemFragment;
-import com.example.foodhub.ui.search.fragments.RestaurantFragment;
 import com.google.android.material.tabs.TabLayout;
 
-public class MyOrderActivity extends AppCompatActivity {
+public class MyOrderActivity extends BaseActivity {
 
     private ActivityMyOrderBinding binding;
 

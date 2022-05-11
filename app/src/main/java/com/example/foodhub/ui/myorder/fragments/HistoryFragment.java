@@ -6,11 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.foodhub.databinding.FragmentFoodItemBinding;
 import com.example.foodhub.databinding.FragmentHistoryBinding;
 import com.example.foodhub.databinding.FragmentUpcomingBinding;
+import com.example.foodhub.ui.myorder.adapters.HistoryAdapter;
 import com.example.foodhub.ui.search.adapter.FoodItemSearchAdapter;
 
 public class HistoryFragment extends Fragment {
@@ -26,7 +28,10 @@ public class HistoryFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        HistoryAdapter adapter =new HistoryAdapter();
 
+        binding.historyOrdersRv.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.historyOrdersRv.setAdapter(adapter);
 
 
     }

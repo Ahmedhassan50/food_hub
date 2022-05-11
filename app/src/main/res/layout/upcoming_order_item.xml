@@ -10,19 +10,19 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="15dp"
         >
 
         <LinearLayout
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:id="@+id/header"
-            >
+            android:gravity="center_vertical">
+
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="2dp"
@@ -30,50 +30,50 @@
                 android:layout_marginBottom="2dp"
                 android:background="@drawable/back_shape"
                 android:elevation="2dp"
-                android:scaleType="center"
+                android:scaleType="centerCrop"
+                android:padding="10dp"
                 android:src="@drawable/starbuks" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginStart="10dp"
+                android:orientation="vertical"
 
                 >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    >
+                    android:gravity="center_vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
                         android:text="20 Jun, 10:30"
                         android:textColor="#9796A1"
-                        android:textSize="12dp"
-                        android:layout_marginEnd="10dp"
-                        />
+                        android:textSize="12dp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/dot_icon"
                         android:layout_marginEnd="10dp"
-                        />
+                        android:src="@drawable/dot_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
                         android:text="3 Items"
                         android:textColor="#9796A1"
-                        android:textSize="12dp"
-                        android:layout_marginEnd="10dp"
-                        />
+                        android:textSize="12dp" />
+
                     <View
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="0dp"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -85,23 +85,24 @@
 
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/restaurant_name_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/restaurant_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="6dp"
+                        android:text="Starbuck"
                         android:textColor="@color/black"
                         android:textSize="15dp"
-                        android:textStyle="bold"
-                        android:text="Starbuck" />
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -113,67 +114,144 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    >
+                    android:visibility="invisible">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/green_dot"
-                        android:layout_marginEnd="6dp"
                         android:layout_gravity="center_vertical"
-                        />
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/green_dot" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Order Delivered"
                         android:textColor="#4EE476"
-                        android:textSize="12dp"
-                        />
+                        android:textSize="12dp" />
                 </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@+id/header"
+    android:id="@+id/center"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimated Arrival"
+            android:textSize="12dp"
+            android:textColor="#9796A1"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now"
+            android:textSize="12dp"
+            android:textColor="#9796A1"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_marginTop="6dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25"
+                android:textColor="#111719"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:layout_marginEnd="6dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="min"
+                android:textColor="#111719"
+                android:textSize="15dp"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food on the way"
+            android:textSize="14dp"
+            android:textColor="#111719"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingVertical="3dp"
-            android:layout_below="@+id/header"
+            android:layout_below="@+id/center"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            >
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingVertical="3dp">
 
             <TextView
                 android:id="@+id/rate"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
                 android:background="@drawable/social_btn_bg"
                 android:elevation="3dp"
-                android:layout_marginStart="3dp"
                 android:gravity="center"
                 android:paddingVertical="12dp"
-                android:text="Rate"
-                android:layout_marginVertical="3dp"
+                android:text="Cancel"
                 android:textAllCaps="false"
                 android:textColor="#111719"
                 android:textSize="15dp"
-                android:layout_marginEnd="20dp"
 
                 />
+
             <TextView
                 android:id="@+id/reorder"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
                 android:background="@drawable/auth_btn_bg"
                 android:elevation="3dp"
-                android:layout_marginStart="3dp"
                 android:gravity="center"
                 android:paddingVertical="12dp"
-                android:text="Re-Order"
-                android:layout_marginVertical="3dp"
+                android:text="Track Order"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="15dp"

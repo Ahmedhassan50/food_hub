@@ -6,18 +6,21 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toolbar;
 
 import com.example.foodhub.BaseActivity;
 import com.example.foodhub.R;
 import com.example.foodhub.databinding.ActivityHomeBinding;
+import com.example.foodhub.ui.addresses.AddressesActivity;
 import com.example.foodhub.ui.home.fragment.CartFragment;
 import com.example.foodhub.ui.home.fragment.FavoriteFragment;
 import com.example.foodhub.ui.home.fragment.HomeFragment;
 import com.example.foodhub.ui.home.fragment.MapFragment;
 import com.example.foodhub.ui.home.fragment.NotificationFragment;
 import com.example.foodhub.ui.myorder.MyOrderActivity;
+import com.example.foodhub.ui.profile.ProfileActivity;
 import com.yarolegovich.slidingrootnav.SlideGravity;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
@@ -25,7 +28,7 @@ import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 public class HomeActivity extends BaseActivity {
 
-    private ActivityHomeBinding binding;
+    public ActivityHomeBinding binding;
 
 public static SlidingRootNav drawer;
 
@@ -60,7 +63,7 @@ public static SlidingRootNav drawer;
     }
 
 
-    private void replaceFragment(Fragment fragment) {
+    public void replaceFragment(Fragment fragment) {
         if (fragment != null) {
 
             FragmentManager manager = getSupportFragmentManager();
@@ -80,6 +83,9 @@ public static SlidingRootNav drawer;
         }
 
     }
+    
+
+
 
     public void exec(View view) {
         switch (view.getId()) {
@@ -131,10 +137,12 @@ public static SlidingRootNav drawer;
             drawer.closeMenu();
         });
         drawer.getLayout().findViewById(R.id.item2).setOnClickListener(v->{
-
+            goTo(ProfileActivity.class);
+            drawer.closeMenu();
         });
         drawer.getLayout().findViewById(R.id.item3).setOnClickListener(v->{
-
+            goTo(AddressesActivity.class);
+            drawer.closeMenu();
         });
         drawer.getLayout().findViewById(R.id.item4).setOnClickListener(v->{
 
