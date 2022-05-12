@@ -25,6 +25,15 @@ public class CheckOutActivity extends AppCompatActivity {
 
         binding.paymentMethodsRv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         binding.paymentMethodsRv.setAdapter(adapter);
+
+
+        binding.backBtn.setOnClickListener(v->{
+            finish();
+        });
+
+        binding.confirmOrder.setOnClickListener(v->{
+
+        });
     }
 
 

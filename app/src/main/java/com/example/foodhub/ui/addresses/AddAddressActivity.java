@@ -36,6 +36,10 @@ public class AddAddressActivity extends AppCompatActivity {
             finish();
         });
 
+        binding.addAddressBtn.setOnClickListener(v->{
+
+        });
+
 
     }
 }

@@ -21,5 +21,9 @@ public class ResetPasswordActivity extends BaseActivity {
         binding.resetBackBtn.setOnClickListener(v->{
             finish();
         });
+
+        binding.resetPassword.setOnClickListener(view -> {
+
+        });
     }
 }

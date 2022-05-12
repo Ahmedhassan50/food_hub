@@ -31,7 +31,7 @@
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_addresses.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_check_out.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_home.xml" value="0.2" />
-        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_main.xml" value="0.3323076923076923" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_meal_details.xml" value="0.22" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_my_order.xml" value="0.2" />
@@ -42,7 +42,7 @@
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_reset_password.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_restaurant_details.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_search.xml" value="0.22" />
-        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_sign_up.xml" value="0.18" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_splash.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_verification.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/activity_welcome.xml" value="0.22" />
@@ -52,13 +52,19 @@
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/category_item.xml" value="1.25" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/drawer_layout.xml" value="0.25" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/dropdown_item.xml" value="0.3323076923076923" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/favorite_food_item.xml" value="0.2" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/favorite_restaurant_item.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/featured_item.xml" value="0.22" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/featured_item_temp.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/first_search_element.xml" value="0.3323076923076923" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/food_search_item.xml" value="0.16" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_cart.xml" value="0.22" />
-        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_favorite.xml" value="0.3323076923076923" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_favorite.xml" value="0.18" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_favorite_food_item.xml" value="0.2" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_favorite_restaurant.xml" value="0.16" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_first.xml" value="0.3323076923076923" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_food_item.xml" value="0.2" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_fraorite_food_ite.xml" value="0.3323076923076923" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_history.xml" value="0.18" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_home.xml" value="0.2448700410396717" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_map.xml" value="0.25" />
@@ -66,12 +72,15 @@
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_restaurant.xml" value="0.22" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/fragment_upcoming.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/history_order_item.xml" value="0.18" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/main_app_btn.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/mea_type_item.xml" value="0.25" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/meal_item.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/onboard_item.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/payment_item.xml" value="0.25" />
-        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/restaurant_item.xml" value="0.2" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/restaurant_item.xml" value="0.22" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/restaurant_item_temp.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/restaurant_search_item.xml" value="0.2" />
+        <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/social_btns_layout.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/upcoming_order_ietm.xml" value="0.22" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/layout/upcoming_order_item.xml" value="0.2" />
         <entry key="..\:/fci/programming/Testing/Orange/Food Hub/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19444444444444445" />
