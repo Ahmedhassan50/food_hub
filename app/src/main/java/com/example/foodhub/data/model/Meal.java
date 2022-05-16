@@ -1,55 +1,63 @@
 package com.example.foodhub.data.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Meal {
 
-    private int image;
-    private double rate;
-    private double price;
-    private int rateNumber;
+    private String id;
+    @SerializedName("resturant_id")
+    private String restaurantId;
     private String name;
-    private String restaurantName;
+    @SerializedName("pic")
+    private String image;
+    private String price;
+    private String description;
+    @SerializedName("rating")
+    private String rate;
+    @SerializedName("number_of_ratings")
+    private String rateNumber;
 
-    public Meal(int image, double rate, double price, int rateNumber, String name, String restaurantName) {
-        this.image = image;
-        this.rate = rate;
-        this.price = price;
-        this.rateNumber = rateNumber;
+    public Meal(String id, String restaurantId, String name, String image, String price, String description, String rate, String rateNumber) {
+        this.id = id;
+        this.restaurantId = restaurantId;
         this.name = name;
-        this.restaurantName = restaurantName;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-
-    public double getRate() {
-        return rate;
+        this.image = image;
+        this.price = price;
+        this.description = description;
+        this.rate = rate;
+        this.rateNumber = rateNumber;
     }
 
 
-
-    public double getPrice() {
-        return price;
+    public String getId() {
+        return id;
     }
 
-
-
-    public int getRateNumber() {
-        return rateNumber;
+    public String getRestaurantId() {
+        return restaurantId;
     }
-
-
 
     public String getName() {
         return name;
     }
 
-
-
-    public String getRestaurantName() {
-        return restaurantName;
+    public String getImage() {
+        return image;
     }
 
+    public String getPrice() {
+        return price;
+    }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public String getRate() {
+        return rate;
+    }
+
+    public String getRateNumber() {
+        return rateNumber;
+    }
 }

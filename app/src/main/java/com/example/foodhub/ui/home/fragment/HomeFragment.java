@@ -10,14 +10,18 @@ import android.widget.ImageView;
 import androidx.fragment.app.Fragment;
 
 import androidx.annotation.Nullable;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.foodhub.R;
 import com.example.foodhub.data.model.Category;
+import com.example.foodhub.data.model.HomeModel;
 import com.example.foodhub.data.model.Meal;
 import com.example.foodhub.data.model.Restaurant;
 import com.example.foodhub.databinding.FragmentHomeBinding;
 import com.example.foodhub.ui.home.HomeActivity;
+import com.example.foodhub.ui.home.HomeViewModel;
 import com.example.foodhub.ui.home.adapters.CategoryAdapter;
 import com.example.foodhub.ui.home.adapters.MealAdapter;
 import com.example.foodhub.ui.home.adapters.RestaurantAdapter;
@@ -28,6 +32,11 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
+
+    private HomeViewModel homeViewModel;
+    private CategoryAdapter categoryAdapter;
+     private MealAdapter mealAdapter;
+   private RestaurantAdapter restaurantAdapter;
 
 
 
@@ -43,19 +52,40 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        homeViewModel =new ViewModelProvider(getActivity()).get(HomeViewModel.class);
+
+
         binding.drawerIcon.setOnClickListener(v->{
             HomeActivity.drawer.openMenu();
         });
 
+        homeViewModel.getHomeData();
+
+
+
+        homeViewModel.homeData.observe(getActivity(), new Observer<HomeModel>() {
+            @Override
+            public void onChanged(HomeModel homeModel) {
+                categoryAdapter.setData(homeModel.getCategories());
+                mealAdapter.setData(homeModel.getMeals());
+                restaurantAdapter.setData(homeModel.getRestaurants());
+            }
+        });
+
+        categoryAdapter = new CategoryAdapter();
+        mealAdapter =new MealAdapter();
+        restaurantAdapter =new RestaurantAdapter();
+
+
 
         ArrayList<Category> categories =new ArrayList<>();
-        categories.add(new Category(R.drawable.burger_image,"Burger"));
+        /*categories.add(new Category(R.drawable.burger_image,"Burger"));
         categories.add(new Category(R.drawable.burger_image,"Donat"));
         categories.add(new Category(R.drawable.burger_image,"Pizza"));
         categories.add(new Category(R.drawable.burger_image,"Mexican"));
-        categories.add(new Category(R.drawable.burger_image,"Asian"));
+        categories.add(new Category(R.drawable.burger_image,"Asian"));*/
 
-        ArrayList<Restaurant> restaurants =new ArrayList<>();
+       /* ArrayList<Restaurant> restaurants =new ArrayList<>();
         restaurants.add(new Restaurant(R.drawable.restaurant_image,4.5,25,"McDonald’s",
                 "free delivery","10-15 mins"));
         restaurants.add(new Restaurant(R.drawable.restaurant_image,4.7,99,"Starbuck",
@@ -63,26 +93,26 @@ public class HomeFragment extends Fragment {
         restaurants.add(new Restaurant(R.drawable.restaurant_image,4.5,25,"McDonald’s",
                 "free delivery","10-15 mins"));
         restaurants.add(new Restaurant(R.drawable.restaurant_image,4.7,99,"Starbuck",
-                "$2 delivery","10-15 mins"));
+                "$2 delivery","10-15 mins"));*/
 
         ArrayList<Meal> meals =new ArrayList<>();
-        meals.add(new Meal(R.drawable.nuduls,4.5,5.50,25,"Salmon Salad"
+      /*  meals.add(new Meal(R.drawable.nuduls,4.5,5.50,25,"Salmon Salad"
                 ,"Baked salmon fish"));
         meals.add(new Meal(R.drawable.nuduls,4.5,8.25,25,"Salmon Salad"
                 ,"Baked salmon fish"));
         meals.add(new Meal(R.drawable.nuduls,4.5,5.50,25,"Salmon Salad"
                 ,"Baked salmon fish"));
         meals.add(new Meal(R.drawable.nuduls,4.5,8.25,25,"Salmon Salad"
-                ,"Baked salmon fish"));
+                ,"Baked salmon fish"));*/
 
 
 
-        CategoryAdapter adapter =new CategoryAdapter(categories);
-        RestaurantAdapter restaurantAdapter =new RestaurantAdapter(restaurants);
-        MealAdapter mealAdapter =new MealAdapter(meals);
+
+
+
 
         binding.categoryRv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        binding.categoryRv.setAdapter(adapter);
+        binding.categoryRv.setAdapter(categoryAdapter);
 
         binding.restaurantRv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         binding.restaurantRv.setAdapter(restaurantAdapter);

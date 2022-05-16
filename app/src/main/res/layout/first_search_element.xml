@@ -2,13 +2,14 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="100dp"
-    android:text="Found\n56 results"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:text="Found\n56 results"
     android:textColor="@color/black"
     android:textSize="31dp"
     android:textStyle="bold"
     android:layout_marginHorizontal="10dp"
     android:layout_marginBottom="10dp"
-    />
+    android:id="@+id/num_of_search_items" />
 
 
 

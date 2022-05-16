@@ -33,14 +33,14 @@ public class FavoriteRestaurantFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ArrayList<Restaurant> restaurants =new ArrayList<>();
-        restaurants.add(new Restaurant(R.drawable.restaurant_image,4.5,25,"McDonald’s",
+        /*restaurants.add(new Restaurant(R.drawable.restaurant_image,4.5,25,"McDonald’s",
                 "free delivery","10-15 mins"));
         restaurants.add(new Restaurant(R.drawable.restaurant_image,4.7,99,"Starbuck",
                 "$2 delivery","10-15 mins"));
         restaurants.add(new Restaurant(R.drawable.restaurant_image,4.5,25,"McDonald’s",
                 "free delivery","10-15 mins"));
         restaurants.add(new Restaurant(R.drawable.restaurant_image,4.7,99,"Starbuck",
-                "$2 delivery","10-15 mins"));
+                "$2 delivery","10-15 mins"));*/
         FavoriteRestaurantAdapter restaurantAdapter =new FavoriteRestaurantAdapter(restaurants);
         binding.favoriteRestaurantRv.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.favoriteRestaurantRv.setAdapter(restaurantAdapter);

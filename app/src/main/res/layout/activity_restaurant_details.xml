@@ -16,13 +16,13 @@
 
 
         <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/restaurant_image"
+            android:id="@+id/restaurant_cover"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/restaurant_image"
+            tools:src="@drawable/restaurant_image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,11 +40,11 @@
             android:elevation="4dp"
             android:scaleType="center"
             android:src="@drawable/arrow_back"
-            app:layout_constraintBottom_toBottomOf="@id/restaurant_image"
-            app:layout_constraintEnd_toEndOf="@id/restaurant_image"
+            app:layout_constraintBottom_toBottomOf="@id/restaurant_cover"
+            app:layout_constraintEnd_toEndOf="@id/restaurant_cover"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/restaurant_image"
-            app:layout_constraintTop_toTopOf="@id/restaurant_image"
+            app:layout_constraintStart_toStartOf="@id/restaurant_cover"
+            app:layout_constraintTop_toTopOf="@id/restaurant_cover"
             app:layout_constraintVertical_bias="0.0"
             android:layout_margin="10dp"
             />
@@ -58,40 +58,40 @@
             android:padding="4dp"
             android:scaleType="center"
             android:src="@drawable/ic_baseline_favorite_24"
-            app:layout_constraintBottom_toBottomOf="@id/restaurant_image"
-            app:layout_constraintEnd_toEndOf="@id/restaurant_image"
+            app:layout_constraintBottom_toBottomOf="@id/restaurant_cover"
+            app:layout_constraintEnd_toEndOf="@id/restaurant_cover"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@id/restaurant_image"
-            app:layout_constraintTop_toTopOf="@id/restaurant_image"
+            app:layout_constraintStart_toStartOf="@id/restaurant_cover"
+            app:layout_constraintTop_toTopOf="@id/restaurant_cover"
             app:layout_constraintVertical_bias="0.0" />
 
 
         <com.google.android.material.imageview.ShapeableImageView
 
 
-            android:id="@+id/user_image"
+            android:id="@+id/restaurant_image"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:padding="6dp"
             android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="@+id/restaurant_image"
-            app:layout_constraintEnd_toEndOf="@id/restaurant_image"
-            app:layout_constraintStart_toStartOf="@+id/restaurant_image"
-            app:layout_constraintTop_toBottomOf="@+id/restaurant_image"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurant_cover"
+            app:layout_constraintEnd_toEndOf="@id/restaurant_cover"
+            app:layout_constraintStart_toStartOf="@+id/restaurant_cover"
+            app:layout_constraintTop_toBottomOf="@+id/restaurant_cover"
             app:shapeAppearanceOverlay="@style/roundedImageViewRoundedWithStroke"
             app:strokeColor="@color/white"
             app:strokeWidth="10dp"
-            app:srcCompat="@drawable/pizza" />
+            tools:srcCompat="@drawable/pizza" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/right2"
-            app:layout_constraintBottom_toBottomOf="@+id/user_image"
-            app:layout_constraintEnd_toEndOf="@+id/user_image"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurant_image"
+            app:layout_constraintEnd_toEndOf="@+id/restaurant_image"
             app:layout_constraintHorizontal_bias="0.807"
-            app:layout_constraintStart_toStartOf="@+id/user_image"
-            app:layout_constraintTop_toTopOf="@+id/user_image"
+            app:layout_constraintStart_toStartOf="@+id/restaurant_image"
+            app:layout_constraintTop_toTopOf="@+id/restaurant_image"
             app:layout_constraintVertical_bias="0.842" />
 
         <TextView
@@ -103,15 +103,15 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_image"
-            android:text="Pizza Hut" />
+            app:layout_constraintTop_toBottomOf="@+id/restaurant_image"
+            tools:text="Pizza Hut" />
 
 
         <TextView
             android:id="@+id/restaurant_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4102 Pretty View Lanenda"
+            tools:text="4102 Pretty View Lanenda"
             android:textColor="#9796A1"
             android:textSize="12dp"
             android:layout_marginTop="8dp"
@@ -193,7 +193,7 @@
                     android:id="@+id/restaurant_delivery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="free delivery"
+                    tools:text="free delivery"
                     android:textColor="#5B5B5E"
                     android:textSize="12dp" />
 
@@ -214,7 +214,7 @@
                     android:id="@+id/restaurant_delivery_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="10-15 mins"
+                    tools:text="10-15 mins"
                     android:textColor="#5B5B5E"
                     android:textSize="12dp" />
 
@@ -244,7 +244,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
-                android:text="4.5"
+                tools:text="4.5"
                 android:textColor="@color/black"
                 android:textSize="14dp"
                 android:textStyle="bold" />
@@ -255,7 +255,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
-                android:text="(25+)"
+                tools:text="(25+)"
                 android:textColor="#9796A1"
                 android:textSize="14dp" />
 
@@ -295,6 +295,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/num_of_items"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/icon_padge"

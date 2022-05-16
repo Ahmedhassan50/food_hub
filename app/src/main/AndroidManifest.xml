@@ -16,6 +16,9 @@
         android:theme="@style/Theme.FoodHub"
         tools:replace="android:supportsRtl">
         <activity
+            android:name=".ui.category.CategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.checkout.CheckOutActivity"
             android:exported="false" />
         <activity

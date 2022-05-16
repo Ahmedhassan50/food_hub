@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="220dp"
     app:cardCornerRadius="15dp"
 android:layout_marginHorizontal="10dp"
 android:layout_marginBottom="15dp"
@@ -44,6 +44,7 @@ android:layout_marginBottom="15dp"
             >
 
             <ImageView
+                android:id="@+id/searched_restaurant_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_centerInParent="true"
@@ -54,9 +55,10 @@ android:layout_marginBottom="15dp"
                 android:background="@drawable/back_shape"
                 android:elevation="2dp"
                 android:scaleType="center"
-                android:src="@drawable/starbuks" />
+                tools:src="@drawable/starbuks" />
 
             <TextView
+                android:id="@+id/searched_restaurant_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -152,7 +154,7 @@ android:layout_marginBottom="15dp"
                     android:layout_height="wrap_content"
                     android:text="free"
                     android:textColor="#5B5B5E"
-                    android:textSize="12dp" />
+                    android:textSize="10dp" />
 
             </LinearLayout>
 
@@ -173,7 +175,7 @@ android:layout_marginBottom="15dp"
                     android:layout_height="wrap_content"
                     android:text="10-15 mins"
                     android:textColor="#5B5B5E"
-                    android:textSize="12dp" />
+                    android:textSize="10dp" />
 
             </LinearLayout>
         </LinearLayout>

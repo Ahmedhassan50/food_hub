@@ -1,37 +1,50 @@
 package com.example.foodhub.data.model;
 
-public class Restaurant {
-   private int image;
-   private double rate;
-   private int rateNumber;
-   private String name;
-   private String delivery;
-   private String deliveryTime;
+import com.google.gson.annotations.SerializedName;
 
-    public Restaurant(int image, double rate, int rateNumber, String name, String delivery, String deliveryTime) {
-        this.image = image;
-        this.rate = rate;
-        this.rateNumber = rateNumber;
+public class Restaurant {
+
+   private String id;
+    private String name;
+    @SerializedName("pic")
+   private String image;
+    private String delivery;
+    @SerializedName("delivery_time")
+    private String deliveryTime;
+    private String tags;
+    @SerializedName("rating")
+    private String rate;
+    @SerializedName("cover_photo")
+    private String cover;
+    @SerializedName("number_of_ratings")
+    private String rateNumber;
+    private String address;
+
+
+    public Restaurant(String id, String name, String image, String delivery, String deliveryTime, String tags, String rate, String cover, String rateNumber, String address) {
+        this.id = id;
         this.name = name;
+        this.image = image;
         this.delivery = delivery;
         this.deliveryTime = deliveryTime;
+        this.tags = tags;
+        this.rate = rate;
+        this.cover = cover;
+        this.rateNumber = rateNumber;
+        this.address = address;
     }
 
 
-    public int getImage() {
-        return image;
-    }
-
-    public double getRate() {
-        return rate;
-    }
-
-    public int getRateNumber() {
-        return rateNumber;
+    public String getId() {
+        return id;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getImage() {
+        return image;
     }
 
     public String getDelivery() {
@@ -42,4 +55,23 @@ public class Restaurant {
         return deliveryTime;
     }
 
+    public String getTags() {
+        return tags;
+    }
+
+    public String getRate() {
+        return rate;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
+    public String getRateNumber() {
+        return rateNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 }

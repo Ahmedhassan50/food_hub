@@ -37,7 +37,7 @@ public class FavoriteRestaurantAdapter extends  RecyclerView.Adapter<FavoriteRes
         Restaurant restaurant =restaurants.get(position);
 
         holder.restaurantName.setText(restaurant.getName());
-        holder.restaurantImage.setImageResource(restaurant.getImage());
+//        holder.restaurantImage.setImageResource(restaurant.getImage());
         holder.restaurantDelivery.setText(restaurant.getDelivery());
         holder.restaurantRate.setText(restaurant.getRate()+"");
         holder.restaurantDeliveryTime.setText(restaurant.getDeliveryTime());

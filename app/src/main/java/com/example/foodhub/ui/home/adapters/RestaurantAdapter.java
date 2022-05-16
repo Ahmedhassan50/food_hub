@@ -1,5 +1,6 @@
 package com.example.foodhub.ui.home.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,18 +11,26 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.foodhub.R;
 import com.example.foodhub.data.model.Category;
+import com.example.foodhub.data.model.Meal;
 import com.example.foodhub.data.model.Restaurant;
+import com.example.foodhub.data.remote.RetrofitModule;
 import com.example.foodhub.ui.restaurantdetails.RestaurantDetailsActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RestaurantAdapter extends  RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>{
 
-    private List<Restaurant> restaurants;
-    public RestaurantAdapter(List<Restaurant>restaurants){
+    private List<Restaurant> restaurants =new ArrayList<>();
+
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void setData(List<Restaurant>restaurants){
         this.restaurants=restaurants;
+        notifyDataSetChanged();
     }
 
 
@@ -37,16 +46,18 @@ public class RestaurantAdapter extends  RecyclerView.Adapter<RestaurantAdapter.R
     public void onBindViewHolder(@NonNull RestaurantAdapter.RestaurantViewHolder holder, int position) {
         Restaurant restaurant =restaurants.get(position);
 
+        Glide.with(holder.restaurantImage.getRootView()).load(RetrofitModule.BASE_URL+restaurant.getCover()).into(holder.restaurantImage);
+
         holder.restaurantName.setText(restaurant.getName());
-        holder.restaurantImage.setImageResource(restaurant.getImage());
         holder.restaurantDelivery.setText(restaurant.getDelivery());
         holder.restaurantRate.setText(restaurant.getRate()+"");
         holder.restaurantDeliveryTime.setText(restaurant.getDeliveryTime());
-        holder.restaurantRateNumber.setText("("+restaurant.getRateNumber()+")");
+        holder.restaurantRateNumber.setText("("+restaurant.getRateNumber()+"+"+")");
 
 
         holder.itemView.setOnClickListener(v->{
             Intent i =new Intent(holder.itemView.getContext(), RestaurantDetailsActivity.class);
+            i.putExtra("restaurant_id",restaurant.getId());
             holder.itemView.getContext().startActivity(i);
         });
 
