@@ -47,7 +47,8 @@ public class SearchViewModel extends ViewModel {
         RetrofitModule.foodHubApiService().searchRestaurant("search_restaurant", keyword).enqueue(new Callback<List<Restaurant>>() {
             @Override
             public void onResponse(Call<List<Restaurant>> call, Response<List<Restaurant>> response) {
-                Restaurant dummy =new Restaurant("","","","","","","","","","");
+                Restaurant dummy =new Restaurant("","","","",
+                        "","","","","","","","");
                 response.body().add(0,dummy);
 
                 searchedRestaurants.postValue(response.body());
