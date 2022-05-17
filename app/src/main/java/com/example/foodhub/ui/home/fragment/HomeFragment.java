@@ -2,6 +2,7 @@ package com.example.foodhub.ui.home.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,9 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         homeViewModel =new ViewModelProvider(getActivity()).get(HomeViewModel.class);
+        categoryAdapter = new CategoryAdapter();
+        mealAdapter =new MealAdapter();
+        restaurantAdapter =new RestaurantAdapter();
 
 
         binding.drawerIcon.setOnClickListener(v->{
@@ -66,15 +70,21 @@ public class HomeFragment extends Fragment {
         homeViewModel.homeData.observe(getActivity(), new Observer<HomeModel>() {
             @Override
             public void onChanged(HomeModel homeModel) {
-                categoryAdapter.setData(homeModel.getCategories());
-                mealAdapter.setData(homeModel.getMeals());
-                restaurantAdapter.setData(homeModel.getRestaurants());
+               if(homeModel.getRestaurants()!=null ){
+                   restaurantAdapter.setData(homeModel.getRestaurants());
+               }
+                if(homeModel.getCategories()!=null ){
+                    categoryAdapter.setData(homeModel.getCategories());
+                }
+                if (homeModel.getMeals()!=null){
+                    mealAdapter.setData(homeModel.getMeals());
+                }
+
+
             }
         });
 
-        categoryAdapter = new CategoryAdapter();
-        mealAdapter =new MealAdapter();
-        restaurantAdapter =new RestaurantAdapter();
+
 
 
 

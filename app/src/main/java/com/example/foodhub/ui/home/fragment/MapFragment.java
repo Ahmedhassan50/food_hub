@@ -154,7 +154,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         int spec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
 
         tv.measure(spec, spec);
-        Log.e("spec", tv.getMeasuredWidth() + "");
+//        Log.e("spec", tv.getMeasuredWidth() + "");
         tv.layout(0, 0, tv.getMeasuredWidth(), tv.getMeasuredHeight());
 
         Bitmap b = Bitmap.createBitmap(tv.getMeasuredWidth(), tv.getMeasuredWidth(),
