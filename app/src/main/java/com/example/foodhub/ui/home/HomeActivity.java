@@ -8,11 +8,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.example.foodhub.BaseActivity;
 import com.example.foodhub.R;
 import com.example.foodhub.databinding.ActivityHomeBinding;
+import com.example.foodhub.shared.components.UserCredential;
 import com.example.foodhub.ui.addresses.AddressesActivity;
 import com.example.foodhub.ui.home.fragment.CartFragment;
 import com.example.foodhub.ui.home.fragment.FavoriteFragment;
@@ -30,6 +32,7 @@ public class HomeActivity extends BaseActivity {
 
     public ActivityHomeBinding binding;
 
+
 public static SlidingRootNav drawer;
 
     @Override
@@ -38,7 +41,6 @@ public static SlidingRootNav drawer;
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
-
 
 
 
@@ -55,11 +57,17 @@ public static SlidingRootNav drawer;
 
 
         drawerListeners();
+        drawerData();
 
 
+    }
 
-
-
+    private void drawerData() {
+        UserCredential userCredential = UserCredential.getInstance();
+        TextView userName = (TextView) drawer.getLayout().findViewById(R.id.user_name);
+        userName.setText(userCredential.getUserData().getName());
+        TextView userEmail = (TextView) drawer.getLayout().findViewById(R.id.user_email);
+        userEmail.setText(userCredential.getUserData().getEmail());
     }
 
 

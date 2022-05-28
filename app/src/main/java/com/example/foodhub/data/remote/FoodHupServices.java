@@ -1,21 +1,15 @@
 package com.example.foodhub.data.remote;
 
 
-import android.util.JsonReader;
 
 import com.example.foodhub.data.model.HomeModel;
 import com.example.foodhub.data.model.Meal;
 import com.example.foodhub.data.model.Restaurant;
 import com.example.foodhub.data.model.RestaurantDetails;
 import com.example.foodhub.data.model.User;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-
 import java.util.List;
-
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.Response;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;

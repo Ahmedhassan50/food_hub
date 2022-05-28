@@ -15,6 +15,7 @@ import com.example.foodhub.data.model.LoginRequest;
 import com.example.foodhub.data.model.User;
 import com.example.foodhub.data.remote.RetrofitModule;
 import com.example.foodhub.data.remote.ServiceStatus;
+import com.example.foodhub.shared.components.UserCredential;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
@@ -47,6 +48,8 @@ public class AuthViewModel extends AndroidViewModel {
 
                 if (response.isSuccessful()){
                     loginStatus.postValue(ServiceStatus.SUCCESS);
+                  UserCredential userCredential=  UserCredential.getInstance();
+                  userCredential.setUserData(response.body());
                 }else{
                     loginStatus.postValue(ServiceStatus.ERROR);
                 }

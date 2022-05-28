@@ -127,7 +127,7 @@
                     android:textSize="16dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/signup_email_layout"
+                    android:id="@+id/profile_name_layout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
                     app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/signup_email_et"
+                        android:id="@+id/profile_name_ed"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Your Name"
@@ -170,7 +170,7 @@
                     android:textSize="16dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/signup_email_Layout"
+                    android:id="@+id/profile_email_Layout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -185,7 +185,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/signup_email_ed"
+                        android:id="@+id/profile_email_ed"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Your Email"
@@ -215,7 +215,7 @@
                     android:textSize="16dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/signup_password_Layout"
+                    android:id="@+id/profile_phone_Layout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -229,7 +229,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/signup_password_ed"
+                        android:id="@+id/profile_phone_ed"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Your Phone"
